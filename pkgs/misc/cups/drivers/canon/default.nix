@@ -35,13 +35,13 @@ let
   ld64 = "${stdenv.cc}/nix-support/dynamic-linker";
   libs = pkgs: lib.makeLibraryPath buildInputs;
 
-  version = "5.40";
-  dl = "6/0100009236/10";
+  version = "5.00";
+  dl = "1/0100005951/10";
 
   versionNoDots = builtins.replaceStrings [ "." ] [ "" ] version;
   src_canon = fetchurl {
-    url = "http://gdlp01.c-wss.com/gds/${dl}/linux-UFRII-drv-v${versionNoDots}-usen-20.tar.gz";
-    sha256 = "sha256:069z6ijmql62mcdyxnzc9mf0dxa6z1107cd0ab4i1adk8kr3d75k";
+    url = "https://gdlp01.c-wss.com/gds/1/0100005951/10/linux-UFRIILT-drv-v500-usen-18.tar.gz";
+    sha256 = "sha256:d8d6dce097f4fa9121ef34790e9ac72b11b9b0f7c29107fec401d9e2a825e1a0";
   };
 
   buildInputs = [ cups zlib jbigkit glib gtk3 gnome2.libglade libxml2 gdk-pixbuf pango cairo atk ];
